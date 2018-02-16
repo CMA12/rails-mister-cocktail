@@ -13,3 +13,15 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+function initUpdateNavbarOnScroll() {
+  const navbar = document.querySelector('.navbar-wagon');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= window.innerHeight) {
+      navbar.classList.add('navbar-wagon-opacity');
+    } else {
+      navbar.classList.remove('navbar-wagon-opacity');
+    }
+  });
+}
+
+export { initUpdateNavbarOnScroll };

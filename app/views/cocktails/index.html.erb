@@ -1,0 +1,73 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to image_tag('430459.svg'), cocktails_path, class: "navbar-wagon-brand" %>
+  <%=   %>
+
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="#">Host</a></li>
+        <li><a href="#">Trips</a></li>
+        <li><a href="#">Messagese</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url( '<%= image_path "drink-splash-wallpaper-45097-46268-hd-wallpapers" %>' );">
+  <div class="banner-content">
+    <h1>Cocktails</h1>
+    <p>Be your own Bartender</p>
+    <a class="btn btn-primary btn-lg"><%= link_to "Add a new cocktail recipe", new_cocktail_path %></a>
+  </div>
+</div>
+
+<% img_array = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg"]%>
+<% img_rand = img_array.sample %>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="cards">
+      <h2><%  @cocktails.each do |cocktail| %></h2>
+
+      <a  href=<%= cocktail_path(cocktail) %>>
+      <div class="col-xs-12 col-sm-4">
+        <div id="parent" class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+          <div id="popup" class="card-description"><h2><%= cocktail.description %></h2> <p></p> </div>
+
+          <div class="card-category">
+            <%= cocktail.name %>
+          </div>
+        </div>
+      </div>
+      <%end%>
+      </a>
+    </div>
+  </div>
+</div>
+

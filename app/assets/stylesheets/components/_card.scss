@@ -1,0 +1,52 @@
+
+#popup {
+  display:none;
+}
+
+
+.card {
+  height: 175px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  box-shadow: 2px 2px 4px;
+  color: white;
+  opacity:0.85;
+  position: relative;
+  transition: all 350ms ease;
+  border-radius: 2px;
+}
+
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.card-category {
+  font-size: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.card-description h2 {
+  font-size: 18px;
+}
+
+.card:hover {
+
+  opacity:1;
+
+.card-description {
+    display:none;
+  }
+  #popup {
+  text-align: left;
+  padding-top: 50px;
+  padding-left: 10px;
+  display: block ;
+}
+}
+
